@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Recipe
 
 def home(request):
-  return render(request, 'about.html')
+  return render(request, 'home.html')
 
 def recipes_index(request):
+  recipes = Recipe.objects.all()
   return render(request, 'recipes/index.html', { 'recipes': recipes })
 
 def about(request):
