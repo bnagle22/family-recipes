@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/cat-index.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>Recipes</h1>
+  
+</section>
+
+<section class="card-container">
+  {% for r in recipes %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+          {% comment %} <img 
+            
+          > {% endcomment %}
+        </div>
+        <h2 class="card-title">{{ r.name }}</h2>
+        
+        <p><small>{{ r.ingredients }}</small></p>
+        <p><small>{{ r.steps }}</small></p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
