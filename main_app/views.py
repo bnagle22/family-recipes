@@ -16,7 +16,7 @@ class Home(LoginView):
 
 class RecipeCreate(LoginRequiredMixin, CreateView):
   model = Recipe
-  fields = '__all__'
+  fields = ['name', 'ingredients', 'steps']
   success_url = '/recipes/'
 
   def form_valid(self, form):

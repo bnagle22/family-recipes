@@ -37,3 +37,7 @@ td > textarea {
   align-self: flex-end;
   margin-right: 40px;
 }
+
+#id_ingredients, #id_steps, #id_name {
+  width: 600px;
+}

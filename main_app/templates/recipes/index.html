@@ -15,17 +15,16 @@
 <section class="card-container">
   {% for r in recipes %}
     <div class="card">
-      <div class="card-content">
-        <div class="card-img-container">
-          {% comment %} <img 
+      <a href="{% url 'recipes_detail' recipe.id %}">
+        <div class="card-content">
+          <div class="card-img-container">
+            {% comment %} <img 
             
-          > {% endcomment %}
+            > {% endcomment %}
+          </div>
+          <h2 class="card-title">{{ r.name }}</h2>
         </div>
-        <h2 class="card-title">{{ r.name }}</h2>
-        
-        <p><small>{{ r.ingredients }}</small></p>
-        <p><small>{{ r.steps }}</small></p>
-      </div>
+      </a>
     </div>
   {% endfor %}
 </section>
