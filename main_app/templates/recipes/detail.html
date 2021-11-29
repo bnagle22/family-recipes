@@ -5,7 +5,7 @@
 <link 
   rel="stylesheet" 
   type="text/css" 
-  {% comment %} href="{% static 'css/recipe-detail.css' %}" {% endcomment %}
+  href="{% static 'css/recipe-detail.css' %}"
 />
 {% endblock %}
 
@@ -17,10 +17,14 @@
   </div>
   <div class="recipe-details">
     <h1>{{ recipe.name }}</h1>
-    <h2>Ingredients</h2>
-    <p>{{ recipe.ingredients }}</p>
-    <h2>Steps</h2>
-    <p>{{ recipe.steps }}</p>
+    <div id="ingredients">
+      <h2>Ingredients</h2>
+      <p>{{ recipe.ingredients }}</p>
+    </div>
+    <div id="steps">
+      <h2>Steps</h2>
+      <p>{{ recipe.steps }}</p>
+    </div>
   </div>
 </section>
 
