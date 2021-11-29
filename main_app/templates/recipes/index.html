@@ -15,7 +15,7 @@
 <section class="card-container">
   {% for r in recipes %}
     <div class="card">
-      <a href="{% url 'recipes_detail' recipe.id %}">
+      <a href="{% url 'recipes_detail' r.id %}">
         <div class="card-content">
           <div class="card-img-container">
             {% comment %} <img 
