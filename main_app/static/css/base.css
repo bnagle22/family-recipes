@@ -1,3 +1,55 @@
 body {
-  background-color: rgb(155, 192, 255);
+  background-color: rgb(12, 73, 177);
+}
+
+nav {
+  margin: 10px;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+}
+
+h2 {
+  font-size: var(--font-xl);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: var(--link-hover-color)
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  padding: 5px 8px;
+}
+
+.header-logo-container {
+  margin: auto;
+  padding: 10px 20px 0;
+  max-width: 500px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  margin: 20px;
 }
