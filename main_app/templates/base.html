@@ -31,8 +31,11 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/recipes">All Recipes</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="{% url 'recipes_index' %}">All Recipes</a></li>
+        <li><a href="{% url 'recipes_create' %}">Add a Recipe</a></li>
+        <li><a href="{% url 'home' %}">Login</a></li>
+        <li><a href="{% url 'signup' %}">Sign Up</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
       </ul>
     </nav>
   </header>
