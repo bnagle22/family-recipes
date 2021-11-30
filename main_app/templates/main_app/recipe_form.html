@@ -21,12 +21,9 @@
 {% if object %}
   <h1>Edit {{ object.name }} </h1>
 {% else %}
-  <h1>Add a Recipe </h1>
+  <h1 id="add-recipe">Add a Recipe </h1>
 {% endif %}
 
-<div class="page-header">
-  <h1>Add a Recipe</h1>
-</div>
 {% comment %} 
   Leaving the action empty makes the form post to the same url used to display it
 {% endcomment %}
@@ -39,7 +36,7 @@
     {{ form.as_table }}
     
   </table>
-  <button type="submit" class="btn submit">Submit!</button>
+  <button type="submit" class="btn btn-primary">Submit!</button>
 </form>
 
 {% endblock %}

@@ -1,7 +1,36 @@
 .form-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin: 10px;
+  width: 200px;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.recipe-details {
+  margin: 20px;
+}
+
+#ingredients, #steps, #date {
+  border: black;
+}
+
+#title {
+  font-weight: bolder;
+  font-size: 5rem;
 }
 
 table {
@@ -38,6 +67,10 @@ td > textarea {
   margin-right: 40px;
 }
 
+.btn-primary {
+  background-color: rgb(155, 0, 49);
+}
+
 #id_ingredients, #id_steps, #id_name, #id_date {
   width: 600px;
 }
@@ -45,4 +78,6 @@ td > textarea {
 #card-title {
   color: black;
   margin: 20px;
+  text-align: center;
+  align-items: center;
 }
