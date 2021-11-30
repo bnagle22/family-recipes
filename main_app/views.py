@@ -38,7 +38,7 @@ def home(request):
 
 @login_required
 def recipes_index(request):
-  recipes = Recipe.objects.filter(user=request.user)
+  recipes = Recipe.objects.all()
   return render(request, 'recipes/index.html', { 'recipes': recipes })
 
 @login_required
