@@ -12,6 +12,8 @@ https://trello.com/b/A76FEcVa/family-recipes
 
 # Screenshots
 
+![Screen Shot 2021-11-30 at 4 41 21 PM (2)](https://user-images.githubusercontent.com/80408236/144133244-1cebd54c-85f9-4482-9c01-1c0caab47d2f.png)
+![Screen Shot 2021-11-30 at 4 40 24 PM](https://user-images.githubusercontent.com/80408236/144133257-bd5c0e39-a03f-4025-8960-fce949a6a2bb.png)
 
 # Technologies Used
 * Django
