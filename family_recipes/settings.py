@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = 'home'
 
-LOGIN_REDIRECT_URL = 'recipes/index'
+LOGIN_REDIRECT_URL = 'recipes/'
 LOGOUT_REDIRECT_URL = 'home'
 
 # Default primary key field type

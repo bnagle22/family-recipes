@@ -6,6 +6,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import RecipeForm
 
 recipes = [
   Recipe('Eggs', ['eggs', 'oil'], ['add oil to pan', 'cook eggs'])
@@ -16,7 +17,7 @@ class Home(LoginView):
 
 class RecipeCreate(LoginRequiredMixin, CreateView):
   model = Recipe
-  fields = ['name', 'ingredients', 'steps']
+  fields = ['name', 'ingredients', 'steps', 'date']
   success_url = '/recipes/'
 
 class RecipeUpdate(UpdateView):
@@ -43,7 +44,8 @@ def recipes_index(request):
 @login_required
 def recipes_detail(request, recipe_id):
   recipe = Recipe.objects.get(id=recipe_id)
-  return render(request, 'recipes/detail.html', {'recipe': recipe })
+  recipe_form = RecipeForm()
+  return render(request, 'recipes/detail.html', {'recipe': recipe, 'recipe_form': recipe_form })
 
 def about(request):
   return render(request, 'about.html')
@@ -68,8 +70,3 @@ def signup(request):
   return render(request, 'signup.html', context)
 
 
-# class Recipe:
-#   def __init__(self, name, ingredients, steps):
-#     self.name = name
-#     self.ingredients = ingredients
-#     self.steps = steps

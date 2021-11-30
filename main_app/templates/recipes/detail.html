@@ -3,10 +3,20 @@
 
 {% block head %}
 <link 
+  href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css" 
+  rel="stylesheet" 
+/>
+<link rel="stylesheet" href="{% static 'css/mcdp.css' %}">
+<script 
+  src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js"
+>
+</script>
+<link 
   rel="stylesheet" 
   type="text/css" 
   href="{% static 'css/recipe-detail.css' %}"
 />
+<script defer src="{% static 'js/recipe-detail.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -24,6 +34,10 @@
     <div id="steps">
       <h2>Steps</h2>
       <p>{{ recipe.steps }}</p>
+    </div>
+    <div id="date">
+      <h2>Date</h2>
+      <p>{{ recipe_form.as_p }}</p>
     </div>
     <div class="recipe-actions">
       <a href="{% url 'recipes_update' recipe.id %}" class="btn warn">Edit </a>
