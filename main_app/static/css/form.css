@@ -38,6 +38,6 @@ td > textarea {
   margin-right: 40px;
 }
 
-#id_ingredients, #id_steps, #id_name {
+#id_ingredients, #id_steps, #id_name, #id_date {
   width: 600px;
 }

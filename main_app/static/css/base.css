@@ -1,5 +1,7 @@
 body {
   background-color: rgb(75, 137, 244);
+  font-family: 'Lora', serif;
+  font-size: 25px;
 }
 
 nav {
@@ -24,7 +26,8 @@ nav a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 26px;
+  font-family: 'Lora', serif;
 }
 
 nav a:hover {
