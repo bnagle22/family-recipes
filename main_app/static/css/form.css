@@ -41,3 +41,8 @@ td > textarea {
 #id_ingredients, #id_steps, #id_name, #id_date {
   width: 600px;
 }
+
+#card-title {
+  color: black;
+  margin: 20px;
+}
