@@ -7,6 +7,12 @@
 
 {% block content %}
 
+{% if object %}
+  <h1>Edit {{ object.name }} </h1>
+{% else %}
+  <h1>Add a Recipe </h1>
+{% endif %}
+
 <div class="page-header">
   <h1>Add a Recipe</h1>
 </div>
@@ -20,18 +26,7 @@
   {% csrf_token %}
   <table>
     {{ form.as_table }}
-      {% comment %} <label>
-        Name:
-        <input type="text" name="name" autocomplete="off">
-      </label>
-      <label>
-        Ingredients:
-        <input type="text" name="name" autocomplete="off">
-      </label>
-      <label>
-        Steps:
-        <input type="text" name="name" autocomplete="off">
-      </label> {% endcomment %}
+    
   </table>
   <button type="submit" class="btn submit">Submit!</button>
 </form>

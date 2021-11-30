@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Recipe
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
@@ -17,6 +17,14 @@ class Home(LoginView):
 class RecipeCreate(LoginRequiredMixin, CreateView):
   model = Recipe
   fields = ['name', 'ingredients', 'steps']
+  success_url = '/recipes/'
+
+class RecipeUpdate(UpdateView):
+  model = Recipe
+  fields = ['ingredients', 'steps']
+
+class RecipeDelete(DeleteView):
+  model = Recipe
   success_url = '/recipes/'
 
   def form_valid(self, form):
