@@ -37,6 +37,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <ul>
         {% if user.is_authenticated%}
+        <li><a href="{% url 'categories' %}">Categories</a></li>
           <li><a href="{% url 'recipes_index' %}">All Recipes</a></li>
           <li><a href="{% url 'recipes_create' %}">Add a Recipe</a></li>
           <li><a href="{% url 'logout' %}">Logout</a></li>

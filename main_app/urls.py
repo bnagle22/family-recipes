@@ -4,6 +4,8 @@ from . import views
 urlpatterns = [
   # localhost:8000/
   path('', views.Home.as_view(), name="home"),
+  # localhost:8000/categories
+  path('categories/', views.categories, name='categories'),
   # localhost:8000/about
   path('about/', views.about, name='about'),
   # localhost:8000/recipes
