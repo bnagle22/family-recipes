@@ -11,4 +11,4 @@ dateInput.addEventListener("click", (evt) => {
   picker.open()
 })
 
-console.log("test")
+console.log(" test ")
